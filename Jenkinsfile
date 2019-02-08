@@ -32,7 +32,7 @@ pipeline {
             steps {
                 // One or more steps need to be included within the steps block.
                 echo 'This is stage: run'
-                bat "start \"Play Process Window\" \"scripts\\run.bat\""
+                bat "start \"Play Process Window\" \"scripts\\run.bat\" \\b"
             }
         }
     }
