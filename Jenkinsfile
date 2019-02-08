@@ -14,11 +14,11 @@ pipeline {
                 bat "sbt clean"
             }
         }
-        stage('build') {
+        stage('compile') {
             steps {
                 // One or more steps need to be included within the steps block.
-                echo 'This is stage: build'
-                bat "sbt build"
+                echo 'This is stage: compile'
+                bat "sbt compile"
             }
         }
         stage('test') {
@@ -28,10 +28,11 @@ pipeline {
                 bat "sbt test"
             }
         }
-        stage('deploy') {
+        stage('run') {
             steps {
                 // One or more steps need to be included within the steps block.
-                echo 'This is stage: deploy'
+                echo 'This is stage: run'
+                bat "sbt run"
             }
         }
     }
