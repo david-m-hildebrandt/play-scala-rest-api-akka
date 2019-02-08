@@ -11,21 +11,21 @@ pipeline {
         stage('clean') {
             steps {
                 echo 'This is stage: clean'
-                sh "sbt clean"
+                bat "sbt clean"
             }
         }
         stage('build') {
             steps {
                 // One or more steps need to be included within the steps block.
                 echo 'This is stage: build'
-                sh "sbt build"
+                bat "sbt build"
             }
         }
         stage('test') {
             steps {
                 // One or more steps need to be included within the steps block.
                 echo 'This is stage: test'
-                sh "sbt build"
+                bat "sbt test"
             }
         }
         stage('deploy') {
